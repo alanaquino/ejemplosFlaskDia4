@@ -2,7 +2,18 @@
 
 {% block contenido %}
     <h1> MyShop </h1>
-    {% for product in products %}
+
+    <div>
+        <form action="/filter" method="POST">
+            <select name="categoria" se>
+                {% for c in categories %}
+                    <option value="{{ c }}">{{ c.upper()}}</option>
+                {% endfor %}
+                <input type="submit" value="filter">
+        </form>
+    </div>
+    <div>
+        {% for product in products %}
         <div>
             <div>
                 <img src={{ url_for('static', filename=product[4])}} alt="cpu">
@@ -14,5 +25,6 @@
             </div>
             <hr>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock contenido %}
