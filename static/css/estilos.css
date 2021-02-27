@@ -1,0 +1,18 @@
+
+body{
+    /* background-color: black; */
+    color: white;
+    margin-right: 100px;
+    margin-left: 100px;
+
+}
+
+div {
+    background-color: green;
+    font-size: x-small;
+}
+
+#precio{
+    font-size: x-large;
+    color: red;
+}
