@@ -4,10 +4,15 @@
     <h1> MyShop </h1>
     {% for product in products %}
         <div>
-            <h3>{{ product[1] }}</h3>
-            <img src={{ url_for('static', filename=product[4])}} alt="cpu">
-            <br>
-            <strong id="precio">$ {{ product[2] }}</strong>
+            <div>
+                <img src={{ url_for('static', filename=product[4])}} alt="cpu">
+            </div>
+            <div>
+                <h3>{{ product[1] }}</h3>
+                <p >{{ product[5] }}</p>
+                <strong id="precio">$ {{ product[2] }}</strong>
+            </div>
+            <hr>
         </div>
     {% endfor %}
 {% endblock contenido %}
