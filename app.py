@@ -31,7 +31,7 @@ def filter_products():
     if request.method == "POST":
         search = request.form['categoria']
         filtered_list = []
-        if search == "All":
+        if search == "ALL":
             return redirect("/")
         else:
             for p in products:
